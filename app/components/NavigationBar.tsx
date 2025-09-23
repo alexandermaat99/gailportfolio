@@ -37,7 +37,7 @@ export default function NavigationBar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700  hover:text-blue-600  hover:bg-gray-100  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-yellow-300 focus:outline-none focus:ring-2 focus:ring-inset"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -58,12 +58,12 @@ export default function NavigationBar() {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200 ">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-amber-300">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700  hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-pink-300 font-space-grotesk font-extrabold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

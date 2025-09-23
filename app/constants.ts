@@ -31,6 +31,13 @@ export const SITE_CONFIG = {
     { name: "Contact", href: "/contact" },
   ],
   
+  // Gallery items (update with your images in /public)
+  gallery: [
+    { src: "/carouselDress.png", alt: "Fashion portrait with dress", title: "Dress Portrait" },
+    { src: "/noEyebrows.png", alt: "Creative portrait", title: "Creative Portrait" },
+    { src: "/greenSet.jpg", alt: "Fashion set in green", title: "Green Set" },
+  ],
+  
   // Footer links
   footer: {
     quickLinks: [
@@ -60,4 +67,4 @@ export const SITE_CONFIG = {
 };
 
 // Export individual sections for easier imports
-export const { title, description, author, email, location, social, socialIcons, navigation, footer, seo, theme } = SITE_CONFIG;
+export const { title, description, author, email, location, social, socialIcons, navigation, gallery, footer, seo, theme } = SITE_CONFIG;

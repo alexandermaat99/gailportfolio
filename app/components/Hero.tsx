@@ -49,12 +49,12 @@ export default function Hero() {
       <div className="relative flex h-full items-center justify-center">
         <div className="max-w-3xl mx-auto px-4 text-center text-white">
           {/* Main Heading */}
-          <h1 className="mb-4 text-4xl font-bold font-bitcount md:text-6xl">
+          <h1 className="mb-4 text-5xl font-bold font-space-grotesk text-amber-300 md:text-6xl">
             {title}
           </h1>
           
           {/* Subtitle */}
-          <p className="mb-6 text-lg font-space-grotesk font-light md:text-xl">
+          <p className="mb-6 text-lg font-space-grotesk text-pink-300 font-extrabold md:text-xl">
             {description}
           </p>
           
