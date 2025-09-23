@@ -5,6 +5,8 @@ import { useEffect, useRef } from 'react';
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  // Use a stable src so SSR and client match; avoids hydration mismatches
+  const videoSrc = '/heroVideo.mp4';
 
   useEffect(() => {
     const video = videoRef.current;
@@ -33,17 +35,15 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
-        controls={false}
+        preload="metadata"
         className="absolute inset-0 h-full w-full object-cover"
         onError={(e) => console.error('Video failed to load:', e)}
         onLoadStart={() => console.log('Video started loading')}
         onCanPlay={() => console.log('Video can play')}
         onPlay={() => console.log('Video is playing')}
-      >
-        <source src="/heroVideo.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        src={videoSrc}
+        onLoadedData={() => console.log('Video loaded:', videoSrc)}
+      />
 
       {/* Content */}
       <div className="relative flex h-full items-center justify-center">

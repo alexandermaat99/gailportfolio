@@ -13,7 +13,7 @@ export default function NavigationBar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-yellow-300 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-space-grotesk">
+            <Link href="/" className="text-2xl font-bold text-yellow-300 hover:text-blue-600 transition-colors font-space-grotesk">
               {title}
             </Link>
           </div>
@@ -25,7 +25,7 @@ export default function NavigationBar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className=" font-space-grotesk text-yellow-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-lg font-bold transition-colors duration-200"
+                  className=" font-space-grotesk text-yellow-300 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-bold transition-colors duration-200"
                 >
                   {item.name}
                 </Link>
@@ -37,7 +37,7 @@ export default function NavigationBar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700  hover:text-blue-600  hover:bg-gray-100  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -58,12 +58,12 @@ export default function NavigationBar() {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200 ">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-gray-700  hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

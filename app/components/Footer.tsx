@@ -26,24 +26,6 @@ export default function Footer() {
                   <path d={socialIcons.instagram} />
                 </svg>
               </a>
-              <a
-                href={social.github}
-                className="text-yellow-300 hover:text-white transition-colors duration-200"
-                aria-label="GitHub"
-              >
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d={socialIcons.github} />
-                </svg>
-              </a>
-              <a
-                href={social.twitter}
-                className="text-yellow-300 hover:text-white transition-colors duration-200"
-                aria-label="Twitter"
-              >
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d={socialIcons.twitter} />
-                </svg>
-              </a>
             </div>
           </div>
 
