@@ -5,13 +5,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-pink-300 text-yellow-300 ">
+    <footer className="bg-[#d9385b] text-[#fffbeb] ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-space-grotesk font-bold mb-4">{title}</h3>
-            <p className="text-yellow-300 font-space-grotesk mb-4 max-w-md">
+            <p className="text-[#fffbeb] font-space-grotesk mb-4 max-w-md">
               {description}
             </p>
             <div className="flex space-x-4">
@@ -19,7 +19,7 @@ export default function Footer() {
                 href={social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-300 font-space-grotesk hover:text-white transition-colors duration-200"
+                className="text-[#fffbeb] font-space-grotesk hover:text-white transition-colors duration-200"
                 aria-label="Instagram"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {footer.quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-yellow-300 font-space-grotesk hover:text-white transition-colors duration-200">
+                  <Link href={link.href} className="text-[#fffbeb] font-space-grotesk hover:text-white transition-colors duration-200">
                     {link.name}
                   </Link>
                 </li>
@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-space-grotesk font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 font-space-grotesk text-yellow-300 ">
+            <ul className="space-y-2 font-space-grotesk text-[#fffbeb] ">
               <li className="flex items-center">
                 <svg className="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
@@ -54,7 +54,7 @@ export default function Footer() {
                 </svg>
                 <a 
                   href={`mailto:${email}`}
-                  className="text-yellow-300  hover:text-white transition-colors duration-200"
+                  className="text-[#fffbeb]  hover:text-white transition-colors duration-200"
                 >
                   {email}
                 </a>
@@ -70,14 +70,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t text-yellow-300 ">
+        <div className="mt-8 pt-8 border-t text-[#fffbeb] ">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-yellow-300 font-space-grotesk text-sm">
+            <p className="text-[#fffbeb] font-space-grotesk text-sm">
               © {currentYear} {title}. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {footer.legal.map((link) => (
-                <a key={link.name} href={link.href} className="text-yellow-300 font-space-grotesk hover:text-white text-sm transition-colors duration-200">
+                <a key={link.name} href={link.href} className="text-[#fffbeb] font-space-grotesk hover:text-white text-sm transition-colors duration-200">
                   {link.name}
                 </a>
               ))}

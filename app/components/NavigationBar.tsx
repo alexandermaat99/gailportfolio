@@ -8,12 +8,12 @@ export default function NavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-pink-300 border-0 shadow-none">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#d9385b] border-0 shadow-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-yellow-300 hover:text-blue-600 transition-colors font-space-grotesk">
+            <Link href="/" className="text-2xl font-bold text-[#fffbeb] hover:text-[#f5f0c4] transition-colors font-space-grotesk">
               {title}
             </Link>
           </div>
@@ -25,7 +25,7 @@ export default function NavigationBar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className=" font-space-grotesk text-yellow-300 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-bold transition-colors duration-200"
+                  className=" font-space-grotesk text-[#fffbeb] hover:text-[#f5f0c4] px-3 py-2 rounded-md text-lg font-bold transition-colors duration-200"
                 >
                   {item.name}
                 </Link>
@@ -37,7 +37,7 @@ export default function NavigationBar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-yellow-300 focus:outline-none focus:ring-2 focus:ring-inset"
+              className="inline-flex items-center justify-center p-2 rounded-md text-[#fffbeb] focus:outline-none focus:ring-2 focus:ring-inset"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -58,12 +58,12 @@ export default function NavigationBar() {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-amber-300">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#fffbeb]">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-pink-300 font-space-grotesk font-extrabold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-[#d9385b] font-space-grotesk font-extrabold block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

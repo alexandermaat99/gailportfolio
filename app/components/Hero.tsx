@@ -49,12 +49,12 @@ export default function Hero() {
       <div className="relative flex h-full items-center justify-center">
         <div className="max-w-3xl mx-auto px-4 text-center text-white">
           {/* Main Heading */}
-          <h1 className="mb-4 text-5xl font-bold font-space-grotesk text-amber-300 md:text-6xl">
+          <h1 className="mb-4 text-5xl font-bold font-space-grotesk text-[#fffbeb] md:text-6xl">
             {title}
           </h1>
           
           {/* Subtitle */}
-          <p className="mb-6 text-lg font-space-grotesk text-pink-300 font-extrabold md:text-xl">
+          <p className="mb-6 text-lg font-space-grotesk text-[#d9385b] font-extrabold md:text-xl">
             {description}
           </p>
           
@@ -62,13 +62,13 @@ export default function Hero() {
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
             <a
               href="/portfolio"
-              className="rounded-full bg-white px-6 py-3 text-base font-semibold text-gray-900 transition-all duration-300 hover:bg-gray-100 hover:scale-105 font-space-grotesk"
+              className="rounded-full bg-[#fffbeb] px-6 py-3 text-base font-semibold text-gray-900 transition-all duration-300 hover:bg-[#f5f0c4] hover:scale-105 font-space-grotesk"
             >
               View My Work
             </a>
             <a
               href="/contact"
-              className="rounded-full border-2 border-white px-6 py-3 text-base font-semibold text-white transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-105 font-space-grotesk"
+              className="rounded-full border-2 border-[#fffbeb] px-6 py-3 text-base font-semibold text-[#fffbeb] transition-all duration-300 hover:bg-[#fffbeb] hover:text-gray-900 hover:scale-105 font-space-grotesk"
             >
               Get In Touch
             </a>
