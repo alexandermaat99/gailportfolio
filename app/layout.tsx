@@ -54,7 +54,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavigationBar />
-        <div className="pt-16 min-h-screen flex flex-col">
+        <div className="pt-16 bg-white min-h-screen flex flex-col">
           <main className="flex-1">
             {children}
           </main>
