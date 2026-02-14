@@ -1,17 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const BLUR_DATA_URL =
+  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEA/ALfZ2drPaQyy28Mkjxqzu8YJYkckkjk0pSlf/9k=";
+
 const portfolioCards = [
   {
     title: "Collections",
     href: "/portfolio/collections",
-    image: "/CollectionA/illustrationGreen3.png",
+    image: "/greenSet.jpg",
     alt: "Collections",
   },
   {
     title: "Tech Packs",
     href: "/portfolio/tech-packs",
-    image: "/CollectionB/illustration3.png",
+    image: "/tech pack hero image.png",
     alt: "Tech Packs",
   },
   {
@@ -20,18 +23,18 @@ const portfolioCards = [
     image: "/resume.png",
     alt: "Resume",
   },
-  {
-    title: "Visual Merchandising",
-    href: "/portfolio/visual-merchandising",
-    image: "/CollectionA/fabric2.png",
-    alt: "Visual Merchandising",
-  },
-  {
-    title: "Modeling",
-    href: "/portfolio/modeling",
-    image: "/CollectionB/mood1.png",
-    alt: "Modeling",
-  },
+  // {
+  //   title: "Visual Merchandising",
+  //   href: "/portfolio/visual-merchandising",
+  //   image: "/CollectionA/fabric2.png",
+  //   alt: "Visual Merchandising",
+  // },
+  // {
+  //   title: "Modeling",
+  //   href: "/portfolio/modeling",
+  //   image: "/CollectionB/mood1.png",
+  //   alt: "Modeling",
+  // },
 ];
 
 export default function Portfolio() {
@@ -56,6 +59,9 @@ export default function Portfolio() {
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DATA_URL}
+                    quality={80}
                   />
                 </div>
                 <div className="p-4 text-center">

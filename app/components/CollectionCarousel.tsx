@@ -3,6 +3,10 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
+// Tiny placeholder for blur-up effect (cream tone to match background)
+const BLUR_DATA_URL =
+  'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBRIhMQYTQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQACAwEAAAAAAAAAAAAAAAABAgADESH/2gAMAwEAAhEDEEA/ALfZ2drPaQyy28Mkjxqzu8YJYkckkjk0pSlf/9k=';
+
 interface CollectionCarouselProps {
   title: string;
   images: string[];
@@ -114,7 +118,10 @@ export default function CollectionCarousel({ title, images, collectionPath }: Co
                   height={900}
                   className="w-full h-full object-contain"
                   priority={index === 0}
-                  quality={90}
+                  quality={75}
+                  sizes="100vw"
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
                 />
               </figure>
             ))}
@@ -222,8 +229,8 @@ export default function CollectionCarousel({ title, images, collectionPath }: Co
               width={2000}
               height={2000}
               className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
-              quality={95}
-              priority
+              quality={85}
+              sizes="100vw"
             />
           </div>
 
