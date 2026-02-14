@@ -38,7 +38,7 @@ export default function About() {
                     Hi! I'm a Utah based fashion designer focused on womenswear and childrenswear, blending vintage inspiration with modern fit and function.
                   </p>
                   <p className="text-lg text-gray-600 leading-relaxed font-space-grotesk">
-                    I turn sketches into production ready garments through patternmaking, sewing, and fit from first prototype to final sample. With five years in retail and hands on exposure to buying and manufacturing, I design with merchandising, cost, and timelines in mind. I hold dual <span className="font-bold">AAS degrees in Fashion Design and Technical Apparel</span>, and I'm versatile across categories while staying true to a feminine vintage leaning aesthetic.
+                    I turn sketches into production ready garments through patternmaking, sewing, and fit from first prototype to final sample. With five years in retail and hands on exposure to buying and manufacturing, I design with merchandising, cost, and timelines in mind. I hold dual <span className="font-bold">AAS degrees in Fashion Design and Technical Apparel</span>, and I'm versatile across categories while staying true to a feminine, vintage leaning aesthetic.
                   </p>
                 </div>
 
