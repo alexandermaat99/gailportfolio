@@ -86,7 +86,7 @@ export default function CollectionCarousel({ title, images, collectionPath }: Co
   return (
     <section className="w-full bg-[#fffbeb] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl text-[#d9385b] font-space-grotesk font-extrabold mb-8 text-center">
+        <h2 className="text-3xl md:text-4xl text-[#d9385b] font-space-grotesk font-extrabold mb-0 md:mb-8 text-center">
           {title}
         </h2>
 
@@ -103,7 +103,7 @@ export default function CollectionCarousel({ title, images, collectionPath }: Co
             {images.map((image, index) => (
               <figure
                 key={image}
-                className={`min-w-full snap-center relative overflow-hidden rounded-lg h-[70vh] transition-all duration-1000 cursor-pointer ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                className={`min-w-full snap-center relative overflow-hidden rounded-lg h-[50vh] md:h-[70vh] transition-all duration-1000 cursor-pointer ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => openLightbox(index)}
               >

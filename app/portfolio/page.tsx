@@ -1,69 +1,73 @@
-import CollectionCarousel from "../components/CollectionCarousel";
 import Image from "next/image";
 import Link from "next/link";
 
+const portfolioCards = [
+  {
+    title: "Collections",
+    href: "/portfolio/collections",
+    image: "/CollectionA/illustrationGreen3.png",
+    alt: "Collections",
+  },
+  {
+    title: "Tech Packs",
+    href: "/portfolio/tech-packs",
+    image: "/CollectionB/illustration3.png",
+    alt: "Tech Packs",
+  },
+  {
+    title: "Resume",
+    href: "/portfolio/resume",
+    image: "/resume.png",
+    alt: "Resume",
+  },
+  {
+    title: "Visual Merchandising",
+    href: "/portfolio/visual-merchandising",
+    image: "/CollectionA/fabric2.png",
+    alt: "Visual Merchandising",
+  },
+  {
+    title: "Modeling",
+    href: "/portfolio/modeling",
+    image: "/CollectionB/mood1.png",
+    alt: "Modeling",
+  },
+];
+
 export default function Portfolio() {
-  const collectionAImages = [
-    'mood1.png',
-    'fabric2.png',
-    'illustrationGreen3.png',
-    'illustrationYellow4.png',
-    'flatGreen5.png',
-    'flatYellow6.png',
-  ];
-
-  const collectionBImages = [
-    'mood1.png',
-    'fabirc2.png',
-    'illustration3.png',
-    'idIllustration4.png',
-    'illustration5.png',
-    'idIllustration6.png',
-  ];
-
   return (
     <div>
-      <CollectionCarousel 
-        title="Fall/Winter Collection" 
-        images={collectionAImages}
-        collectionPath="/CollectionA"
-      />
-      <CollectionCarousel 
-        title="Spring/Summer Collection" 
-        images={collectionBImages}
-        collectionPath="/CollectionB"
-      />
-      
-      {/* Resume Section */}
       <section className="w-full bg-[#fffbeb] py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl text-[#d9385b] font-space-grotesk font-extrabold mb-8 text-center">
-            Resume
+            Welcome to my portfolio
           </h2>
-          <div className="flex flex-col items-center gap-6">
-            <div className="relative bg-white rounded-lg shadow-lg p-4 w-full sm:w-[700px]">
-              <Image
-                src="/resume.png"
-                alt="Resume"
-                width={1200}
-                height={1600}
-                className="w-full h-auto object-contain"
-                priority
-              />
-            </div>
-            <div className="text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {portfolioCards.map((card) => (
               <Link
-                href="/resume.png"
-                download
-                className="inline-block rounded-full bg-[#d9385b] px-8 py-3 text-base font-semibold text-white transition-all duration-300 hover:bg-[#b82d4a] hover:scale-105 font-space-grotesk"
+                key={card.href}
+                href={card.href}
+                className="group block rounded-xl overflow-hidden border-2 border-white/20 bg-white/50 shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:border-[#d9385b]/40"
               >
-                Download Resume
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#fffbeb]">
+                  <Image
+                    src={card.image}
+                    alt={card.alt}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="text-lg font-space-grotesk font-bold text-[#d9385b] group-hover:text-[#b82d4a] transition-colors">
+                    {card.title}
+                  </h3>
+                </div>
               </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
     </div>
   );
 }
-
