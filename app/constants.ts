@@ -28,7 +28,7 @@ export const SITE_CONFIG = {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/about#contact" },
   ],
   
   // Gallery items (update with your images in /public)
@@ -44,7 +44,7 @@ export const SITE_CONFIG = {
       { name: "Home", href: "/" },
       { name: "About", href: "/about" },
       { name: "Portfolio", href: "/portfolio" },
-      { name: "Contact", href: "/contact" },
+      { name: "Contact", href: "/about#contact" },
     ],
     legal: [
       { name: "Privacy Policy", href: "#" },

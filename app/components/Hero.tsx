@@ -67,7 +67,7 @@ export default function Hero() {
               View My Work
             </a>
             <a
-              href="/contact"
+              href="/about#contact"
               className="rounded-full border-2 border-[#fffbeb] px-6 py-3 text-base font-semibold text-[#fffbeb] transition-all duration-300 hover:bg-[#fffbeb] hover:text-gray-900 hover:scale-105 font-space-grotesk"
             >
               Get In Touch

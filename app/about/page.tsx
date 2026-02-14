@@ -43,7 +43,7 @@ export default function About() {
                 </div>
 
                 {/* Contact Information */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div id="contact" className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 scroll-mt-60">
                   <div className="bg-[#fffbeb] rounded-lg border-2 border-[#d9385b] p-6">
                     <h3 className="text-xl font-bold font-space-grotesk text-[#d9385b] mb-4">
                       Get In Touch
@@ -116,7 +116,7 @@ export default function About() {
                       View My Work
                     </a>
                     <a
-                      href="/contact"
+                      href={`mailto:${email}`}
                       className="rounded-full border-2 border-[#d9385b] px-8 py-3 text-base font-semibold text-[#d9385b] transition-all duration-300 hover:bg-[#d9385b] hover:text-white hover:scale-105 font-space-grotesk"
                     >
                       Get In Touch
